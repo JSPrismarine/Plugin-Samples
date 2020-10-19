@@ -1,9 +1,14 @@
-module.exports = (plugin) => {
-    plugin.getServer().getLogger().info('Hello World!')
+class HelloWorldPlugin {
+    constructor(api) {
+        this.api = api;
+    }
 
-    plugin.getCommandManager().registerCommand('hello-world', 'Says hello t everybody', (sender) => {
-        plugin.getOnlinePlayers().forEach((player) => {
-            player.sendMessage(`Hello ${player.name}!`)
-        })
-    })
-}
+    async onStart() {
+        this.api.getLogger().info('Hello World');
+    }
+    async onExit() {
+        this.api.getLogger().info('Goodbye World');
+    }
+};
+
+module.exports.default = HelloWorldPlugin;
