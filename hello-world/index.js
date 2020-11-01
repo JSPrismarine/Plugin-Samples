@@ -3,10 +3,11 @@ class HelloWorldPlugin {
         this.api = api;
     }
 
-    async onStart() {
+    async onEnable() {
         this.api.getLogger().info('Hello World');
     }
-    async onExit() {
+    
+    async onDisable() {
         this.api.getLogger().info('Goodbye World');
     }
 };
