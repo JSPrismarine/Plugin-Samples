@@ -13,6 +13,6 @@
     "express": "^4.17.1"
   },
   "devDependencies": {
-    "@jsprismarine/prismarine": "^0.1.0-rc.41"
+    "@jsprismarine/prismarine": "0.1.0-rc.49"
   }
 }
